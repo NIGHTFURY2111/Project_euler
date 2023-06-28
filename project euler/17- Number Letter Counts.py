@@ -2,7 +2,7 @@ def compute():
 	ans = sum(len(to_english(i)) for i in range(1, 1001))
 	return str(ans)
 
-
+#test change
 def to_english(n):
 	if 0 <= n < 20:
 		return ONES[n]
