@@ -22,6 +22,7 @@ for j in range(10,1000001):
         temp_list.append(i)
     
         # i = (7/4)*i+(0.5)+(-1)**(i+1)*((5/4)*i+(0.5)) this is a formula
+        
         # i = (i>>1)*(1-(i%2))+(3*i+1)*(i%2) this is another formula
         if i%2 ==0:
             i = i/2
