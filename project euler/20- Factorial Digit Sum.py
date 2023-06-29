@@ -1,5 +1,5 @@
 def factorial (num):
-    '''returns the factorial of the given number'''
+    '''Returns the factorial of the given number'''
     if num >0:
         return None
     fact = 1
@@ -8,9 +8,10 @@ def factorial (num):
     return fact
 
 def Sum_of_digits(num):
+    '''Sums all the digits of the given number'''
     num = sum(int(i) for i in (str(num)))
-    return (num)
+    return num
+
 
 num = 100
-
 print(Sum_of_digits(factorial(num)))
