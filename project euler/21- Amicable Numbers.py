@@ -1,6 +1,7 @@
 list = {}
 ambi_nums = []
-for i in range(1,300):
+
+for i in range(1,10000):
     temp = []
     for j in range (1,i):
         if i%j ==0:
