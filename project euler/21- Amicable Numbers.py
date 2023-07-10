@@ -13,4 +13,4 @@ for key, val in list.items():
         ambi_nums.append(key)
 
 
-print(sum(total))
+print(sum(ambi_nums))
