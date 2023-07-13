@@ -1,37 +1,39 @@
-import itertools
-list = []
-ambi_nums = []
-# num_list=[i for i in range(28123)]
-num_list = [1]
+import time
+start = time.perf_counter()
 
-for i in range(2,28123):
+def abundant_number_check(num):
     temp = [1]
-    for j in range (2,i):
+    
+    for j in range (2,int(num**0.5)+1):
         if j in temp:
             break
-        x,y = divmod(i,j)
+        x,y = divmod(num,j)
         if y ==0:
             temp.append(j)
             if x not in temp:
                 temp.append(x)
-    
-    if sum(temp) > i:
-        list.append(i)
-    
-    isSum = False
-    for j in list[:int(len(list)/2)]:
-        diff = i-j
+    return sum(temp)
+
+def isSum (num):
+    for j in abundant_numbers:
+        diff = num-j
+        if diff in abundant_numbers:
+            return False
+    return True
         
-        if diff in list:
-            isSum = True
-            break
         
-    if not isSum :
-        num_list.append(i)
+abundant_numbers = set()
+non_abundant_nums = [1]
+till = 28123
+for i in range(2,till+1):
 
+    if abundant_number_check(i) > i:
+        abundant_numbers.add(i)
 
+    if isSum(i) :
+        non_abundant_nums.append(i)
 
-print(sum(num_list))
-
-print(len(list))
+print(sum(non_abundant_nums))
+stop = time.perf_counter()
+print(stop - start)
 
