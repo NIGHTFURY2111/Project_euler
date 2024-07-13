@@ -60,9 +60,3 @@ if __name__ =="__main__":
                     
     print(max(allCombi, key = lambda x: allCombi[x])  )  
     print(max(allCombi.values())  )  
-
-
-
-# Math - 11/12/2023 - 12:30
-# English - 12/12/2023 - 12:30
-# HTML5 - 13/12/2023 - 9:15
